@@ -5,9 +5,11 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.Serializable;
 
@@ -79,15 +81,15 @@ public class Student implements Serializable{
         this.level = level;
     }
 
-    @Override
-    public String toString() {
-        return "Student [Address=" + address + ", Id=" + id + ", Level=" + level + ", NIC=" + nic + ", Name=" + name
-                + "]";
-    }
-
-    @JsonIgnore
-    @OneToOne(mappedBy = "student",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinTable(name = "user_student", 
+      joinColumns = 
+        { @JoinColumn(name = "student_id", referencedColumnName = "id") },
+      inverseJoinColumns = 
+        { @JoinColumn(name = "user_username", referencedColumnName = "username") })
+    @JsonIgnoreProperties("student")
     private User user;
+    
 
     public User getUser() {
         return user;
@@ -95,6 +97,12 @@ public class Student implements Serializable{
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    @Override
+    public String toString() {
+        return "Student [address=" + address + ", id=" + id + ", level=" + level + ", name=" + name + ", nic=" + nic
+                + ", user=" + user + "]";
     }
 
 }

@@ -9,7 +9,7 @@ export class RestApiService {
   constructor(private http:HttpClient) { }
 
   public login(username:string, password:string){
-    const headers = new HttpHeaders({Authorization: 'basic'+(username+":"+password)})
+    const headers = new HttpHeaders({Authorization: 'Basic '+btoa(username + ':' + password)})
     return this.http.get("http://localhost:8080/",{headers});
   }
 

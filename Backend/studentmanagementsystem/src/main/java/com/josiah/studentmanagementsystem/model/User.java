@@ -5,11 +5,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.Serializable;
 
@@ -64,13 +62,8 @@ public class User implements Serializable{
     }
 
 
-    @JsonIgnore
-    @OneToOne(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    @JoinTable(name = "user_student", 
-      joinColumns = 
-        { @JoinColumn(name = "user_username", referencedColumnName = "username") },
-      inverseJoinColumns = 
-        { @JoinColumn(name = "student_id", referencedColumnName = "id") })
+    @OneToOne(mappedBy = "user",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("user")
     private Student student;
 
     public Student getStudent() {

@@ -14,13 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class LoginResource {
 
-    @GetMapping("")
-    public String login(Authentication authentication) {
-        return "kundikala";
-    }
-
     // @GetMapping("")
-    // public Collection<? extends GrantedAuthority> login(Authentication authentication) {
-    //     return authentication.getAuthorities();
+    // public String login(Authentication authentication) {
+    //     return "kundikala";
     // }
+
+    @GetMapping("")
+    public Collection<? extends GrantedAuthority> login(Authentication authentication) {
+        return authentication.getAuthorities();
+    }
 }
