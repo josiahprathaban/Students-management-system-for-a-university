@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHomeComponent implements OnInit {
 
+  logo:string = "../assets/images/hack.svg";
+
   constructor() { }
 
   ngOnInit(): void {

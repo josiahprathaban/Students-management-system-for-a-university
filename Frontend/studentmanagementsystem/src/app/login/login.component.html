@@ -1,5 +1,13 @@
-<form class="login">
-  <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required>
-  <input type="password" name="password" [(ngModel)]="password"placeholder="Password" required>
-  <button (click)="logingIn()">Login</button>
-</form>
+<div class="login">
+  <form>
+    <img [src]=logo> 
+    <div class="discription">{{discription}}</div>
+    <div class="logo">{{heading}}</div>
+    <div class="welcomeHead">{{welcomeHead}}</div>
+    <div class="welcomeMess">{{welcomeMess}}</div>
+    
+    <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required>
+    <input type="password" name="password" [(ngModel)]="password"placeholder="Password" required>
+    <button (click)="logingIn()">Login</button>
+  </form>
+</div>

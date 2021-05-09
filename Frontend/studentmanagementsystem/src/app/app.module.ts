@@ -9,19 +9,28 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { RestApiService } from './rest-api.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './Components/search/search.component';
+import { BigBbuttonComponent } from './Components/big-bbutton/big-bbutton.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     StudentHomeComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    SearchComponent,
+    BigBbuttonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [RestApiService],
   bootstrap: [AppComponent]

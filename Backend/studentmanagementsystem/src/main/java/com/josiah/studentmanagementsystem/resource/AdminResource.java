@@ -26,10 +26,7 @@ public class AdminResource {
     
     @GetMapping("")
     public String welcomeAdmin(Authentication authentication){
-        if (authentication != null)
             return authentication.getName();
-        else
-            return "";
     }
 
     @PostMapping("/add")

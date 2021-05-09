@@ -13,8 +13,13 @@ export class RestApiService {
     return this.http.get("http://localhost:8080/",{headers});
   }
 
-  public student(){
-    //const headers = new HttpHeaders({Authorization: 'basic'+btoa(username+":"+password)})
-    return this.http.get("http://localhost:8080/student");
+  public student(username:string, password:string){
+    const headers = new HttpHeaders({Authorization: 'Basic '+btoa(username + ':' + password)})
+    return this.http.get("http://localhost:8080/student",{headers});
+  }
+
+  public admin(username:string, password:string){
+    const headers = new HttpHeaders({Authorization: 'Basic '+btoa(username + ':' + password)})
+    return this.http.get("http://localhost:8080/admin",{headers, responseType: 'text'});
   }
 }
