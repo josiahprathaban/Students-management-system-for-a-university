@@ -1,0 +1,25 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { FormTextFieldComponent } from './form-text-field.component';
+
+describe('FormTextFieldComponent', () => {
+  let component: FormTextFieldComponent;
+  let fixture: ComponentFixture<FormTextFieldComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ FormTextFieldComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(FormTextFieldComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

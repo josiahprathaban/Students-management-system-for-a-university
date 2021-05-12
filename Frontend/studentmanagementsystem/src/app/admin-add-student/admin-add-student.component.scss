@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+$primarytext:rgba(100, 200, 150, 1);
+$primaryback: rgba(100, 200, 150, 0.3);
+$primaryborder: rgba(100, 200, 150, 0.8);
+$button: rgba(100, 200, 150, 1);
+$buttonhover:  rgb(73, 180, 127);
+
+
+.add_student{
+  font-family: 'Open Sans', sans-serif;
+}
+
+// Body Start
+.add_student .body{
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: calc(100vh - 330px);
+  text-align: center;
+  padding-top: 50px;
+}
+
+.body .form{
+  display: grid;
+  width: 500px;
+  display: inline-block;
+  border: 1px solid rgb(224, 224, 224);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.body .form .heading{
+  width: fit-content;
+  font-size: 25px;
+  text-align: center;
+  margin-top: -30px;
+  background-color: white;
+  color: rgb(199, 199, 199);
+}
+.body .form .sub_heading{
+  letter-spacing: 2px;
+  margin-top: 5px;
+  width: fit-content;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(199, 199, 199);
+}
+
+input[type="submit"]{
+  margin-top: 10px;
+  background-color: $primaryborder;
+  color: white;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+input[type="submit"]:hover{
+  background-color: $primarytext;
+}
+
+@media only screen and (max-width: 650px) {
+  .add_student .body{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .body .form{
+    width: calc(100% - 40px);
+  }
+}
+// Body End

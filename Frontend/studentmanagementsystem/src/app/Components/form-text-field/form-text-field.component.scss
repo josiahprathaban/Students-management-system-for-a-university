@@ -1,0 +1,41 @@
+$primarytext:rgba(100, 200, 150, 1);
+$primaryback: rgba(100, 200, 150, 0.3);
+$primaryborder: rgba(100, 200, 150, 0.8);
+$button: rgba(100, 200, 150, 1);
+$buttonhover:  rgb(73, 180, 127);
+
+.form_feild{
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+  background-color: rgba(100, 200, 150, 0.1);
+  margin: 10px;
+}
+
+label{
+  font-weight: 500;
+  font-size: 20px;
+  display: block;
+  padding-bottom: 10px;
+}
+input[type=text], input[type=email],input[type=password]{
+  color: $primarytext;
+  width: calc(100% - 20px);
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid $primaryborder;
+  line-height: 20px;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 100;
+}
+
+::placeholder {
+  color:    rgba(100, 200, 150, 0.6);
+  font-size: 15px;
+}

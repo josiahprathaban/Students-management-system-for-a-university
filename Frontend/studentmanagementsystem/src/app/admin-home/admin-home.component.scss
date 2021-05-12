@@ -7,58 +7,15 @@ $button: rgba(100, 200, 150, 1);
 $buttonhover:  rgb(73, 180, 127);
 
 
-// Headder Start
 .admin{
-  margin-left: 50px;
-  margin-right: 50px;
   font-family: 'Open Sans', sans-serif;
 }
 
-.admin .header{
-  margin: 20px;
-  position: relative;
-}
-
-.admin .header .logo{
-  display: inline;
-  color: $primarytext;
-  font-size: 25px;
-  font-weight: 900;
-  position: absolute;
-  left: 0;
-}
-
-.admin .header .log-out-button{
-  display: inline;
-  position: absolute;
-  right: 0;
-}
-
-.admin .header .log-out-button button{
-  padding: 5px 10px 5px 10px;color: rgb(255, 255, 255);
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 10px;
-  background-color: $button;
-  border: 1px solid $primaryborder;
-  color: rgb(255, 255, 255);
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.admin .header .log-out-button button:hover{
-  background-color: $buttonhover;
-}
-@media only screen and (max-width: 500px) {
-  .admin{
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-}
-// Header End
-
 // Body Start
 .admin .body{
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: calc(100vh - 330px);
   text-align: center;
   padding-top: 50px;
 }
@@ -70,5 +27,30 @@ $buttonhover:  rgb(73, 180, 127);
 .admin .body .img img{
   width: 200px;
   height: 200px;
+}
+
+.admin .body .buttons{
+  padding: 0 200px 0 200px ;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .admin .body .buttons{
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .admin .body .buttons{
+    margin: 30px;
+    display: block;
+  }
+
+  .admin .body{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 // Body End

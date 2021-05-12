@@ -1,3 +1,4 @@
+import { Attribute } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BigBbuttonComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Attribute('button_name') public button_name: string, @Attribute('button_discription') public button_discription: string, @Attribute('button_target') public button_target: string) { }
 
   ngOnInit(): void {
   }

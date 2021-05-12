@@ -13,6 +13,10 @@ import { SearchComponent } from './Components/search/search.component';
 import { BigBbuttonComponent } from './Components/big-bbutton/big-bbutton.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { FooterComponent } from './Components/footer/footer.component';
+import { AdminHeaderComponent } from './Components/admin-header/admin-header.component';
+import { AdminAddStudentComponent } from './admin-add-student/admin-add-student.component';
+import { FormTextFieldComponent } from './Components/form-text-field/form-text-field.component';
 
 
 @NgModule({
@@ -23,6 +27,10 @@ import { MatIconModule } from '@angular/material/icon';
     AdminHomeComponent,
     SearchComponent,
     BigBbuttonComponent,
+    FooterComponent,
+    AdminHeaderComponent,
+    AdminAddStudentComponent,
+    FormTextFieldComponent,
   ],
   imports: [
     BrowserModule,

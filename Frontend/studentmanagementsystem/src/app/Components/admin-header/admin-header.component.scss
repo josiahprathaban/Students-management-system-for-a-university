@@ -1,0 +1,79 @@
+$primarytext:rgba(100, 200, 150, 1);
+$primaryback: rgba(100, 200, 150, 0.3);
+$primaryborder: rgba(100, 200, 150, 0.8);
+$button: rgba(100, 200, 150, 1);
+$buttonhover:  rgb(73, 180, 127);
+
+.header{
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 40px;
+  position: relative;
+}
+
+.header .logo{
+  display: inline;
+  color: $primarytext;
+  font-size: 25px;
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+}
+
+.header .logo a{
+  color: $primarytext;
+  text-decoration: none;
+}
+
+.header .logo .sub_heading{
+  color: rgba(100, 200, 150, 1);
+  font-size: 20px;
+  display: inline;
+  padding-left: 10px;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.header .logo .sub_heading .divider{
+  font-size: 30px;
+}
+
+.header .log-out-button{
+  display: inline;
+  position: absolute;
+  right: 0;
+}
+
+.header .log-out-button button{
+  padding: 5px 10px 5px 10px;color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: $button;
+  border: 1px solid $primaryborder;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-weight: 600;
+}
+.header .log-out-button button:hover{
+  background-color: $buttonhover;
+}
+
+@media only screen and (max-width: 500px) {
+  header{
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .header .logo .sub_heading .divider{
+    display: none;
+  }
+
+  .header .logo .sub_heading{
+    display: block;
+    margin-top: 5px;
+    font-size: 15px;
+    padding-left: 5px;
+    margin-left: 5px;
+  }
+}

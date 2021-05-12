@@ -1,12 +1,14 @@
 <div class="admin">
-  <div class="header">
-    <div class="logo">USMS-Admin</div>
-    <div class="log-out-button"><button>Log out</button></div>
-  </div>
+  <app-admin-header heading="USMS-Admin"></app-admin-header>
   <div class="body">
     <div class="img"><img [src]=logo></div>
     <div class="search">
       <app-search></app-search>
     </div>
+    <div class="buttons">
+      <app-big-bbutton button_name="Add New Student" button_discription="Add panni paarunkalan enna nadakkuthu endu. Paathutu neenkale mudivu seinchu kolunka, intha button ena seithu endu!" button_target="admin/addstudent"></app-big-bbutton>
+      <app-big-bbutton button_name="View All Students" button_discription="View panni paarunkalan enna nadakkuthu endu. Paathutu neenkale mudivu seinchu kolunka, intha button ena seithu endu! Piraku enoda kovikka koodathu sollitan."></app-big-bbutton>
+    </div>
   </div>
+  <app-footer></app-footer>
 </div>

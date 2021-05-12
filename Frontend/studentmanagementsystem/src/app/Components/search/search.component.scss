@@ -15,12 +15,15 @@ $buttonhover:  rgb(73, 180, 127);
   text-align: center;
   border-radius: 0 20px 20px 0;
   font-size: 12px;
-  padding: 11px 15px 10px 10px;
+  padding: 11px 37px 10px 10px;
   color: rgb(93, 93, 93);
   background-color: $primaryback;
   border-left: 2px solid $primaryborder;
 }
-
+.mat-icon{
+  position:absolute;
+  top: 10px;
+}
 .form input[type=search]{
   text-align: center;
   border-radius: 20px;
@@ -36,6 +39,7 @@ $buttonhover:  rgb(73, 180, 127);
   outline: none;
 }
 
+
 input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
 input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
 
@@ -45,8 +49,8 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .form input[type=search]{
-    width: 100%;
+    width: 90%;
   }
 }
